@@ -17,7 +17,7 @@ public class Function_azure_webhook {
     public HttpResponseMessage run(
             @HttpTrigger(name = "req", methods = {HttpMethod.GET, HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
             final ExecutionContext context) {
-        context.getLogger().info("Java HTTP trigger processed a request and deployed.");
+        context.getLogger().info("Java HTTP trigger processed a request.");
 
         // Parse query parameter
         String query = request.getQueryParameters().get("name");
