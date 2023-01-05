@@ -13,7 +13,7 @@ public class TimerTriggerFunction {
      */
     @FunctionName("TimerTriggerFunction")
     public void run(
-        @TimerTrigger(name = "timerInfo", schedule = "0 0 * * * *") String timerInfo,
+        @TimerTrigger(name = "timerInfo", schedule = "0 */5 * * * *") String timerInfo,
         final ExecutionContext context
     ) {
         context.getLogger().info("Java Timer trigger function executed at: " + LocalDateTime.now());
